@@ -7,6 +7,8 @@ window.fineList = {
 let DB = data.finesData;
 
 function searchFines(searchKey){
+    console.log(searchKey)
+    console.log(DB)
     /*
      Напишіть свій код тут!
      Як ви бачите функція повертає статичні дані.
@@ -24,4 +26,5 @@ function searchFines(searchKey){
         {номер: '001', тип: 'Перевищення швидкості', сума: 100, дата: '2023-01-15'}
     ];
 }
+
 
