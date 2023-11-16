@@ -21,7 +21,7 @@ function searchFines(searchKey) {
      - Їзда у не тверезому стані
      */
 
-    return DB.filter(element => {
-        return element.номер === searchKey || element.тип === searchKey
-    })
+    return DB.filter(element =>
+        element.номер === searchKey || element.тип === searchKey
+    );
 }
