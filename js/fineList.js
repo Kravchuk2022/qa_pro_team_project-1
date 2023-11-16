@@ -1,12 +1,12 @@
 "use strict";
 window.fineList = {
-    searchFines : searchFines
+    searchFines: searchFines
 }
 
 //Ця зміна містить всі дані які в нас зберігаються у файлі data
 let DB = data.finesData;
 
-function searchFines(searchKey){
+function searchFines(searchKey) {
     console.log(searchKey)
     console.log(DB)
     /*
@@ -21,10 +21,7 @@ function searchFines(searchKey){
      - Їзда у не тверезому стані
      */
 
-
-    return [
-        {номер: '001', тип: 'Перевищення швидкості', сума: 100, дата: '2023-01-15'}
-    ];
+    return DB.filter(element => {
+        return element.номер === searchKey || element.тип === searchKey
+    })
 }
-
-
