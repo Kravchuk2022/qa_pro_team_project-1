@@ -8,14 +8,9 @@ let DB = data.finesData;
 
 function searchFines(searchKey){
     let finesData = window.data.finesData;
-
-    // Фильтруем данные в соответствии с переданным значением поиска
     let filteredFines = finesData.filter(fine => {
-        // Проверяем, соответствует ли штраф переданному значению поиска (номеру или типу)
         return fine.номер === searchKey || fine.тип === searchKey;
     });
-
-    // Возвращаем отфильтрованные данные
     return filteredFines;
 }
 
